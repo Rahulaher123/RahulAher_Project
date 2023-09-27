@@ -70,7 +70,7 @@ Resources:
       DatabaseName: !Ref DatabaseYelp
       Targets:
         S3Targets:
-          - Path: 's3://yelp-output-data-rahul/'  # Change the path
+          - Path: 's3://yelp-output-rahul/'  # Change the path
       TablePrefix: 'Cleanyelpdata'
       SchemaChangePolicy:
         UpdateBehavior: 'UPDATE_IN_DATABASE'
