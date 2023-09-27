@@ -49,7 +49,7 @@ Resources:
       Role: arn:aws:iam::742240590358:role/LabRole
       Command:
         Name: 'glueetl'
-        ScriptLocation: 's3://bdata-script/script.py'  # Change the path
+        ScriptLocation: 's3://athena-project/script/script.py'  # Change the path
       ExecutionProperty:
         MaxConcurrentRuns: 1
       ExecutionClass: FLEX
