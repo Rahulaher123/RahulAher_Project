@@ -17,7 +17,7 @@ Resources:
   Yelpinbucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: 'datalake-rawzone-g3'
+      BucketName: 'datalake-rawzone-datalakebucket'
       NotificationConfiguration:
         LambdaConfigurations:
           - Event: s3:ObjectCreated:*
@@ -26,7 +26,7 @@ Resources:
   Yelpoutbucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: 'yelp-output-data-g3'
+      BucketName: 'yelp-output-rahul'
 
   DatabaseYelp:
     Type: AWS::Glue::Database
