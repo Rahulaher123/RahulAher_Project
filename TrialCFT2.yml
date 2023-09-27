@@ -46,7 +46,7 @@ Resources:
   WorkflowJob:
     Type: AWS::Glue::Job
     Properties:
-      Role: arn:aws:iam::742240590358:role/LabRole
+      Role: arn:aws:iam::778040121010:role/LabRole
       Command:
         Name: 'glueetl'
         ScriptLocation: 's3://athena-project/script/script.py'  # Change the path
@@ -95,7 +95,7 @@ Resources:
               }
 
       Handler: index.lambda_handler
-      Role: 'arn:aws:iam::742240590358:role/LabRole'  # Different for everyone, change the ARN
+      Role: 'arn:aws:iam::778040121010:role/LabRole'  # Different for everyone, change the ARN
       Runtime: python3.8
       FunctionName: 'LambdaforWorkflow'
 
@@ -107,7 +107,7 @@ Resources:
       Action: lambda:InvokeFunction
       Principal: 's3.amazonaws.com'  
       SourceAccount: !Ref AWS::AccountId
-      SourceArn: 'arn:aws:s3:::datalake-rawzone-g3' 
+      SourceArn: 'arn:aws:s3:::datalake-rawzone-datalakebucket' 
 
   WorkflowStartTrigger:
     Type: AWS::Glue::Trigger
