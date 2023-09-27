@@ -159,10 +159,10 @@ rev_sentiment = rev_sentiment.repartition(1)
 df = df.repartition(1)
 
 
-yelp_df.write.json("s3://yelp-output-data-g3/business_final/", mode = "overwrite")
-tip_sent.write.json("s3://yelp-output-data-g3/tips_final/", mode = "overwrite")
-checkin_df.write.json("s3://yelp-output-data-g3/checkin_final/", mode = "overwrite")
-rev_sentiment.write.json("s3://yelp-output-data-g3/review_final/", mode = 'overwrite')
-df.write.json("s3://yelp-output-data-g3/user_final/", mode = 'overwrite')
+yelp_df.write.json("s3://yelp-output-rahul/business_final/", mode = "overwrite")
+tip_sent.write.json("s3://yelp-output-rahul/tips_final/", mode = "overwrite")
+checkin_df.write.json("s3://yelp-output-rahul/checkin_final/", mode = "overwrite")
+rev_sentiment.write.json("s3://yelp-output-rahul/review_final/", mode = 'overwrite')
+df.write.json("s3://yelp-output-rahul/user_final/", mode = 'overwrite')
 
 job.commit()
